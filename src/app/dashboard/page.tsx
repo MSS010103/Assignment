@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
+import Image from "next/image";
 
 export default function DashboardPage() {
   const { data: session, status } = useSession();
@@ -25,7 +26,7 @@ export default function DashboardPage() {
       <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-blue-50 via-purple-50 to-pink-100 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900 p-4">
         <div className="backdrop-blur-lg bg-white/70 dark:bg-gray-900/70 border border-gray-200 dark:border-gray-800 shadow-2xl rounded-3xl p-10 flex flex-col items-center gap-6 max-w-md w-full animate-fade-in">
           {session?.user?.image && (
-            <img src={session.user.image} alt="avatar" className="w-24 h-24 rounded-full border-4 border-blue-400 shadow-lg mb-2" />
+            <Image src={session.user.image} alt="avatar" width={96} height={96} className="w-24 h-24 rounded-full border-4 border-blue-400 shadow-lg mb-2" unoptimized />
           )}
           <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-800 dark:text-white text-center mb-2">
             Hello, <span className="text-blue-600 dark:text-blue-400">{session?.user?.name || "User"}</span>!
