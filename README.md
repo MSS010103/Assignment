@@ -16,31 +16,31 @@ A modern, responsive dashboard to manage pizza orders, featuring Google OAuth au
 
 ### 1. Clone the repository
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/MSS010103/Assignment
 cd next-dashboard
 ```
 
 ### 2. Install dependencies
-```bash
+
 npm install
-```
+
 
 ### 3. Set up environment variables
 Create a `.env.local` file in the project root with the following:
-```
+
 GOOGLE_CLIENT_ID=your-google-client-id.apps.googleusercontent.com
 GOOGLE_CLIENT_SECRET=your-google-client-secret
 NEXTAUTH_SECRET=your-random-secret
-```
+
 
 
 - Get Google OAuth credentials from the [Google Cloud Console](https://console.cloud.google.com/apis/credentials) and set the redirect URI to `http://localhost:3000/api/auth/callback/google`.
 - Generate a random string for `NEXTAUTH_SECRET` (e.g., with `openssl rand -base64 32`).
 
 ### 4. Run the development server
-```bash
+
 npm run dev
-```
+
 
 Open [http://localhost:3000](http://localhost:3000) to view the app.
 
@@ -57,4 +57,4 @@ Deploy easily to [Vercel](https://vercel.com/) or [Railway](https://railway.app/
 - [NextAuth.js](https://next-auth.js.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
 
-# Assignment
+
